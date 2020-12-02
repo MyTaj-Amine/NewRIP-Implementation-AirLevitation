@@ -1,0 +1,38 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8080,
+  },
+  "control": {
+    "impl_module": "RIPArduino",
+    "info": {
+      "name": "RIP Arduino",
+      "description": "An implementation of RIP to control an Arduino",
+      "authors": "J. Chacon",
+      "keywords": "Arduino, RIP",
+      "readables": [{
+        "name":"time",
+        "description":"Server time in seconds",
+        "type":"float",
+        "min":"0",
+        "max":"Inf",
+        "precision":"0"
+      }, {
+        "name": "y",
+        "description": "Output variables",
+        "type": "array",
+            "min": "0",
+            "max": "0",
+            "precision": "0"
+      }],
+      "writables": [{
+        "name": "params",
+        "description": "PID params: kp, ki, kd, u_eq",
+        "type": "array",
+        "min": "0",
+        "max": "0",
+        "precision": "0"
+      }],
+    }
+  }
+}

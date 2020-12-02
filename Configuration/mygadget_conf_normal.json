@@ -1,0 +1,72 @@
+{
+   "server": {
+    "host": "127.0.0.1",
+    "port": 8080
+  },
+  "control": {
+    "impl_module": "RIPSimulink",
+    "info": {
+      "name": "my_cs_example",
+      "description": "A simple MATLAB-Simulink example",
+      "authors": "L. de la Torre",
+      "keywords": "Raspberry PI, RIP",
+      "model": "examples/Model20.slx",
+      "readables": [{
+        "name":"SimulationTime",
+        "description":"Server time in seconds",
+        "type":"float",
+        "min":"0",
+        "max":"Inf",
+        "precision":"0"
+      },
+      {
+        "name":"y",
+        "description":"Output signal",
+        "type":"float",
+        "min":"0",
+        "max":"Inf",
+        "precision":"0"
+      },
+      {
+        "name":"c1output",
+        "description":"Output 1",
+        "type":"float",
+        "min":"0",
+        "max":"1",
+        "precision":"0.0001"
+      },
+      {
+        "name":"c2output",
+        "description":"Output 2",
+        "type":"int",
+        "min":"0",
+        "max":"1",
+        "precision":"1"
+      }],
+      "writables": [{
+        "name":"u",
+        "description":"Input signal",
+        "type":"float",
+        "min":"0",
+        "max":"Inf",
+        "precision":"0"
+      },
+      {
+        "name":"c1input",
+        "description":"Dashboard input 1",
+        "type":"float",
+        "min":"0",
+        "max":"100",
+        "precision":"0.0001"
+      },
+      {
+        "name":"c2input",
+        "description":"Dashboard input 2",
+        "type":"float",
+        "min":"0",
+        "max":"1",
+        "precision":"1"
+      }]
+    }
+  }
+}

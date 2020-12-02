@@ -1,0 +1,60 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8080
+  },
+  "control": {
+    "impl_module": "RIPArduino",
+    "info": {
+      "name": "AirLevitation",
+      "description": "An implementation of RIP to control an Arduino",
+      "authors": " A. MY-TAJ, J. Chacon, A",
+      "keywords": "Arduino, RIP",
+      "sampling_methods": {
+        "PeriodicSampler": {
+          "first_sampling": "5",
+          "period": "1"
+        },
+        "PeriodicSendOnDelta": {
+          "first_Sampling": "5",
+          "period": "1.0"
+        }
+      },
+      "readables": [{
+        "name":"time",
+        "description":"Server time in seconds",
+        "type":"float",
+        "min":"0",
+        "max":"Inf",
+        "precision":"0",
+        "sampling": {
+          "type": "PeriodicSoD",
+          "params": {
+            "delta": "2"
+          }
+        }
+      }, {
+        "name": "y",
+        "description": "Output variables",
+        "type": "array",
+        "min": "0",
+        "max": "0",
+        "precision": "0",
+        "sampling": {
+          "type":"PeriodicSoD",
+          "params": {
+            "delta": "2"
+          }
+        }
+      }],
+      "writables": [{
+        "name": "params",
+        "description": "PID params: kp, ki, kd, u_eq",
+        "type": "array",
+        "min": "0",
+        "max": "0",
+        "precision": "0"
+      }]
+    }
+  }
+}

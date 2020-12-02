@@ -1,0 +1,13 @@
+*.pyc
+.project
+.pydevproject
+
+# Local Virtual Environment
+venv/
+venv_local/
+octave-workspace
+start.sh
+
+# Not tracked files
+log/
+.vscode
